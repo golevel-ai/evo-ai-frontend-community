@@ -4,8 +4,8 @@ import "@evoapi/design-system/styles";
 // our theming overrides in globals.css can win the cascade (EVO-1270).
 import '@xyflow/react/dist/style.css';
 import './styles/globals.css';
-import './consumer'; // Hablas brand customization — see src/consumer/
 import './i18n/config'; // Importar configuração do i18n
+import './consumer'; // Hablas brand customization — see src/consumer/ (must load after i18n/config)
 import App from './App.tsx';
 import { initTheme } from './utils/themeUtils';
 import { initGA4 } from './utils/ga4Utils';

@@ -7,7 +7,10 @@
 // relies on (CSS tokens + plugin registry).
 import { registerPlugin } from '@/plugin-host';
 import './theme.css';
+import { applyI18nOverrides } from './i18n/applyOverrides';
 
 registerPlugin({
   id: 'hablas',
 });
+
+applyI18nOverrides();

@@ -1,18 +1,44 @@
 /*
  * Hablas brand tokens.
  *
- * Overrides the public `--evo-*` contract from EXTENSION_POINTS.md §1.
- * Only touch the token values below — never rename them, and never add
- * `--evo-*` variables outside this contract's table.
+ * Colors extracted from the Hablas logo (src/assets/EVO_CRM*.svg):
+ * bright blue #40c0f0 (icon accent) and navy #176099 (wordmark).
  *
- * TODO(hablas-branding): replace the placeholder values below with the
- * real Hablas brand hex codes once provided.
+ * Two layers on purpose:
+ *  1. The public `--evo-*` contract from EXTENSION_POINTS.md §1. Only touch
+ *     the token values below — never rename them, never add `--evo-*`
+ *     variables outside this contract's table.
+ *  2. The shadcn/Tailwind variables (`--primary`, `--accent`, `--ring`, ...)
+ *     that `@evoapi/design-system` actually renders with today. The §1
+ *     contract explicitly excludes these from its compatibility promise —
+ *     they may shift upstream without notice — but overriding the `--evo-*`
+ *     tokens alone currently has zero visible effect, since no component
+ *     reads them yet. Until the community wires that up, layer 2 is what
+ *     makes buttons/links/focus rings actually show the Hablas blue.
  */
 :root[data-consumer="hablas"] {
-  --evo-color-primary-500: #00ffa7;
+  --evo-color-primary-500: #40c0f0;
   --evo-color-primary-foreground: #0b0f14;
-  --evo-color-accent-500: #00ffa7;
+  --evo-color-accent-500: #176099;
   --evo-color-background: #0b0f14;
   --evo-color-foreground: #e6f1ec;
   --evo-font-sans: Inter, system-ui, sans-serif;
+
+  --primary: #40c0f0;
+  --primary-foreground: #0b0f14;
+  --accent: #176099;
+  --accent-foreground: #ffffff;
+  --ring: #40c0f0;
+  --sidebar-primary: #40c0f0;
+  --sidebar-ring: #40c0f0;
+}
+
+.dark[data-consumer="hablas"] {
+  --primary: #40c0f0;
+  --primary-foreground: #0b0f14;
+  --accent: #176099;
+  --accent-foreground: #ffffff;
+  --ring: #40c0f0;
+  --sidebar-primary: #40c0f0;
+  --sidebar-ring: #40c0f0;
 }
