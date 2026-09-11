@@ -1,0 +1,18 @@
+/*
+ * Hablas brand tokens.
+ *
+ * Overrides the public `--evo-*` contract from EXTENSION_POINTS.md §1.
+ * Only touch the token values below — never rename them, and never add
+ * `--evo-*` variables outside this contract's table.
+ *
+ * TODO(hablas-branding): replace the placeholder values below with the
+ * real Hablas brand hex codes once provided.
+ */
+:root[data-consumer="hablas"] {
+  --evo-color-primary-500: #00ffa7;
+  --evo-color-primary-foreground: #0b0f14;
+  --evo-color-accent-500: #00ffa7;
+  --evo-color-background: #0b0f14;
+  --evo-color-foreground: #e6f1ec;
+  --evo-font-sans: Inter, system-ui, sans-serif;
+}
